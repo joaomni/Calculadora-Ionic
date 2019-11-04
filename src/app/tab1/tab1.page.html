@@ -1,11 +1,47 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab One
+      Calculadora Somatória
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
+  <!-- Titulo da page -->
+  <ion-row>
+    <ion-col>
+      <h2>Primeiro App Com Ionic</h2>
+    </ion-col>
+  </ion-row>
+  <!-- Input para o 1° valor -->
+  <ion-row>
+    <ion-col>
+      <ion-item>
+          <ion-label position="fixed">1º Valor</ion-label>
+          <ion-input placeholder="Digite o valor" type="number" [(ngModel)]="valor1"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <!-- Input para o 2° valor -->
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="fixed">2º Valor</ion-label>
+        <ion-input placeholder="Digite outro valor" type="number" [(ngModel)]="valor2"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button color="success" expand="block" (click)="calcula()">Somar</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col> 
+      <ion-item>
+        <ion-label position="fixed">Resultado</ion-label>
+        <ion-input [value]="exibeResultado()"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
 </ion-content>
